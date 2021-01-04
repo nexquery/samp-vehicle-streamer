@@ -20,7 +20,7 @@
 #define _vehicle_streamer_included
 
 // Geçersiz bir aracın kimlik değeri
-#define INVALID_VEHICLE_ID (0)
+#define INVALID_DYNAMIC_VEHICLE_ID (0)
 
 // Araçlar hangi mesafede oluşturulacak?
 #if !defined STREAMER_VEHICLE_DISTANCE
@@ -33,7 +33,7 @@
  ********************
  */
 
-// Araçlar hangi zaman aralığında kontrol edildiğinin süresini verir
+// Araçların hangi zaman aralığında kontrol edildiğinin süresini verir
 native vStreamer_GetTickRate();
 
 // Araçları hangi zaman aralığında güncelleyini ayarlar (ms cinsinden)
@@ -46,4 +46,4 @@ native vStreamer_SetTickRate(rate);
  */
 
 // Bir araç oluşturarak size değişken bir ID verir.
-native CreateDynamicVehicle(modelid, Float: x, Float: y, Float: z, Float: r, color1, color2, respawn_delay, addsiren = 0, interioid = 0, worldid = 0, dist = STREAMER_VEHICLE_DISTANCE);
+native CreateDynamicVehicle(modelid, Float: x, Float: y, Float: z, Float: r, color1, color2, respawn_delay, addsiren = 0, worldid = 0, interioid = 0, Float: dist = STREAMER_VEHICLE_DISTANCE);
