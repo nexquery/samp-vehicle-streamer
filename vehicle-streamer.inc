@@ -29,9 +29,9 @@
 
 /*
  ********************
- * Native - Ayarlar
+   Native - Ayarlar
  ********************
- */
+*/
 
 // Araçların hangi zaman aralığında kontrol edildiğinin süresini verir
 native vStreamer_GetTickRate();
@@ -41,9 +41,135 @@ native vStreamer_SetTickRate(rate);
 
 /*
  ***************************
- * Native - Araç İşlemleri
+   Native - Araç İşlemleri
  ***************************
- */
+*/
 
 // Bir araç oluşturarak size değişken bir ID verir.
 native CreateDynamicVehicle(modelid, Float: x, Float: y, Float: z, Float: r, color1, color2, respawn_delay, addsiren = 0, worldid = 0, interioid = 0, Float: dist = STREAMER_VEHICLE_DISTANCE);
+
+// Oluşturulan bir aracı siler.
+native DestroyDynamicVehicle(vehicleid);
+
+// Oluşturulan araç bir oyuncu tarafından görünebiliyor mu?
+native IsDynamicVehicleStreamedIn(vehicleid, forplayerid);
+
+// Oluşturulan aracın pozisyonunu çeker.
+native GetDynamicVehiclePos(vehicleid, &Float: x, &Float: y, &Float: z);
+
+// Oluşturulan aracı belirli bir pozisyona ışınlar.
+native SetDynamicVehiclePos(vehicleid, Float: x, Float: y, Float: z);
+
+// Oluşturulan aracın bakış açısını çeker.
+native GetDynamicVehicleZAngle(vehicleid, &Float: rotation);
+
+// Bir aracın Quat açılarını alır.
+native GetDynamicVehicleRotationQuat(vehicleid, &Float: w, &Float: x, &Float: y, &Float: z);
+
+// Girilen pozisyonun araç ile arasındaki mesafeyi alır.
+native Float: GetDynVehicleDistanceFromPoint(vehicleid, Float: x, Float: y, Float: z);
+
+// Bir aracın bakış açısını değiştirir.
+native SetDynamicVehicleZAngle(vehicleid, Float: rotation);
+
+// Aracın Params değerlerini ayarlar.
+native SetDynamicVehicleParamsEx(vehicleid, engine, lights, alarm, doors, bonnet, boot, objective);
+
+// Aracın Params değerlerini çeker.
+native GetDynamicVehicleParamsEx(vehicleid, &engine, &lights, &alarm, &doors, &bonnet, &boot, &objective);
+
+// Bir araçta siren olup olmadığını kontrol eder
+native GetDynVehicleParamsSirenState(vehicleid);
+
+// Bir aracın kapılarını açıp kapatır.
+native SetDynamicVehicleParamsCarDoors(vehicleid, driver, passenger, backleft, backright);
+
+// Bir aracın kapılarının açık veya kapalı olduğunu çeker.
+native GetDynamicVehicleParamsCarDoors(vehicleid, &driver, &passenger, &backleft, &backright);
+
+// Bir aracın cam değerlerini değiştirir.
+native SetDynVehicleParamsCarWindows(vehicleid, driver, passenger, backleft, backright);
+
+// Bir aracın cam değerlerini çekmenizi sağlar.
+native GetDynVehicleParamsCarWindows(vehicleid, &driver, &passenger, &backleft, &backright);
+
+// Bir aracı spawnlar.
+native SetDynamicVehicleToRespawn(vehicleid);
+
+// Bir aracın interior değerini değiştirir.
+native SetDynamicVehicleInterior(vehicleid, interiorid);
+
+// Bir aracın interior değerini çeker.
+native GetDynamicVehicleInterior(vehicleid);
+
+// Araca modifiye parçarsı ekler.
+native AddDynamicVehicleComponent(vehicleid, componentid);
+
+// Bir aracın modifiye parçasını kaldırır.
+native RemoveDynamicVehicleComponent(vehicleid, componentid);
+
+// Bir aracın rengini değiştirir.
+native ChangeDynamicVehicleColor(vehicleid, color1, color2);
+
+// Bir aracın paintjobunu değiştirir.
+native ChangeDynamicVehiclePaintjob(vehicleid, paintjobid);
+
+// Bir aracın can değerini değiştirir.
+native SetDynamicVehicleHealth(vehicleid, Float: health);
+
+// Bir aracın can değerini çeker.
+native GetDynamicVehicleHealth(vehicleid, &Float: health);
+
+// Bir aracın plakasını değiştirir.
+native SetDynamicVehicleNumberPlate(vehicleid, const numberplate[]);
+
+// Bir aracın modelini çeker
+native GetDynamicVehicleModel(vehicleid);
+
+// Bir aracın istenen slottan modifiye parçasını çeker.
+native GetDynVehicleComponentInSlot(vehicleid, slot);
+
+// Default Native -> Bir modifiye parçasının hangi slota ait olduğunu çeker.
+//native GetVehicleComponentType(component);
+
+// Bir aracı tamir eder
+native RepairDynamicVehicle(vehicleid);
+
+// Bir aracın Velocity değerlerini çeker.
+native GetDynamicVehicleVelocity(vehicleid, &Float: x, &Float: y, &Float: z);
+
+// Bir aracın Velocity değerini değiştirir.
+native SetDynamicVehicleVelocity(vehicleid, Float: x, Float: y, Float: z);
+
+// Bir aracın Angular Velocity değerini değiştirir.
+native SetDynVehicleAngularVelocity(vehicleid, Float: x, Float: y, Float: z);
+
+// Bir aracın hasar verilerini alır.
+native GetDynamicVehicleDamageStatus(vehicleid, &panels, &doors, &lights, &tires);
+
+// Bir aracın hasarlarını günceller.
+native UpdateDynVehicleDamageStatus(vehicleid, panels, doors, lights, tires);
+
+// Default Native -> Bir araç modelinin verilerini alır.
+//native GetVehicleModelInfo(vehiclemodel, infotype, &Float: x, &Float: y, &Float: z);
+
+// Bir aracın Virtual World değerini değiştirir.
+native SetDynamicVehicleVirtualWorld(vehicleid, worldid);
+
+// Bir aracın Virtual World değerini alır.
+native GetDynamicVehicleVirtualWorld(vehicleid);
+
+// Aracın yolcu koltuğuna binmenizi sağlar.
+native PutPlayerInDynamicVehicle(playerid, vehicleid, seatid);
+
+// Bindiğiniz aracın hangi ID olduğunu çeker.
+native GetPlayerDynamicVehicleID(playerid);
+
+// Bir oyuncunun belirlenen araçta olup olmadığını çeker
+native IsPlayerInDynamicVehicle(playerid, vehicleid);
+
+// Bir aracı izleme moduna alırsınız.
+native PlayerSpectateDynamicVehicle(playerid, vehicleid, mode = SPECTATE_MODE_NORMAL);
+
+// Bir aracın ID değeri geçerli olup olmadığını kontrol eder.
+native IsValidDynamicVehicle(vehicleid);
