@@ -25,12 +25,56 @@
 		return 0; \
 	}
 
+#define DEFINE_AMX_NATIVE(native) cell AMX_NATIVE_CALL native(AMX* amx, cell* params)
+#define REG_AMX_NATIVE(native_name) {#native_name, Native::native_name},
+	
+
 namespace Native
 {
 	// Settings
-	cell AMX_NATIVE_CALL vStreamer_GetTickRate(AMX* amx, cell* params);
-	cell AMX_NATIVE_CALL vStreamer_SetTickRate(AMX* amx, cell* params);
+	DEFINE_AMX_NATIVE(vStreamer_GetTickRate);
+	DEFINE_AMX_NATIVE(vStreamer_SetTickRate);
 
 	// Vehicle
-	cell AMX_NATIVE_CALL CreateDynamicVehicle(AMX* amx, cell* params);
+	DEFINE_AMX_NATIVE(CreateDynamicVehicle);
+	DEFINE_AMX_NATIVE(DestroyDynamicVehicle);
+	DEFINE_AMX_NATIVE(IsDynamicVehicleStreamedIn);
+	DEFINE_AMX_NATIVE(GetDynamicVehiclePos);
+	DEFINE_AMX_NATIVE(SetDynamicVehiclePos);
+	DEFINE_AMX_NATIVE(GetDynamicVehicleZAngle);
+	DEFINE_AMX_NATIVE(GetDynamicVehicleRotationQuat);
+	DEFINE_AMX_NATIVE(GetDynVehicleDistanceFromPoint);
+	DEFINE_AMX_NATIVE(SetDynamicVehicleZAngle);
+	DEFINE_AMX_NATIVE(SetDynamicVehicleParamsEx);
+	DEFINE_AMX_NATIVE(GetDynamicVehicleParamsEx);
+	DEFINE_AMX_NATIVE(GetDynVehicleParamsSirenState);
+	DEFINE_AMX_NATIVE(SetDynamicVehicleParamsCarDoors);
+	DEFINE_AMX_NATIVE(GetDynamicVehicleParamsCarDoors);
+	DEFINE_AMX_NATIVE(SetDynVehicleParamsCarWindows);
+	DEFINE_AMX_NATIVE(GetDynVehicleParamsCarWindows);
+	DEFINE_AMX_NATIVE(SetDynamicVehicleToRespawn);
+	DEFINE_AMX_NATIVE(SetDynamicVehicleInterior);
+	DEFINE_AMX_NATIVE(GetDynamicVehicleInterior);
+	DEFINE_AMX_NATIVE(AddDynamicVehicleComponent);
+	DEFINE_AMX_NATIVE(RemoveDynamicVehicleComponent);
+	DEFINE_AMX_NATIVE(ChangeDynamicVehicleColor);
+	DEFINE_AMX_NATIVE(ChangeDynamicVehiclePaintjob);
+	DEFINE_AMX_NATIVE(SetDynamicVehicleHealth);
+	DEFINE_AMX_NATIVE(GetDynamicVehicleHealth);
+	DEFINE_AMX_NATIVE(SetDynamicVehicleNumberPlate);
+	DEFINE_AMX_NATIVE(GetDynamicVehicleModel);
+	DEFINE_AMX_NATIVE(GetDynVehicleComponentInSlot);
+	DEFINE_AMX_NATIVE(RepairDynamicVehicle);
+	DEFINE_AMX_NATIVE(GetDynamicVehicleVelocity);
+	DEFINE_AMX_NATIVE(SetDynamicVehicleVelocity);
+	DEFINE_AMX_NATIVE(SetDynVehicleAngularVelocity);
+	DEFINE_AMX_NATIVE(GetDynamicVehicleDamageStatus);
+	DEFINE_AMX_NATIVE(UpdateDynVehicleDamageStatus);
+	DEFINE_AMX_NATIVE(SetDynamicVehicleVirtualWorld);
+	DEFINE_AMX_NATIVE(GetDynamicVehicleVirtualWorld);
+	DEFINE_AMX_NATIVE(PutPlayerInDynamicVehicle);
+	DEFINE_AMX_NATIVE(GetPlayerDynamicVehicleID);
+	DEFINE_AMX_NATIVE(IsPlayerInDynamicVehicle);
+	DEFINE_AMX_NATIVE(PlayerSpectateDynamicVehicle);
+	DEFINE_AMX_NATIVE(IsValidDynamicVehicle);
 };
