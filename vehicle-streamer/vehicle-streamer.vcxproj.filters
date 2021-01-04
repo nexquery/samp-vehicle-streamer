@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\SDK\amxplugin.cpp" />
+    <ClCompile Include="src\sampgdk.cpp" />
+    <ClCompile Include="src\precompiler.cpp" />
+    <ClCompile Include="src\Player\player.cpp" />
+    <ClCompile Include="src\Vehicle\SlotManager.cpp" />
+    <ClCompile Include="src\Vehicle\VehicleData.cpp" />
+    <ClCompile Include="src\Native\Settings.cpp" />
+    <ClCompile Include="src\Native\Native_List.cpp" />
+    <ClCompile Include="src\Native\Vehicle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\SDK\amx\amx.h" />
+    <ClInclude Include="src\SDK\amx\getch.h" />
+    <ClInclude Include="src\SDK\amx\sclinux.h" />
+    <ClInclude Include="src\SDK\plugin.h" />
+    <ClInclude Include="src\SDK\plugincommon.h" />
+    <ClInclude Include="src\sampgdk.h" />
+    <ClInclude Include="src\precompiler.h" />
+    <ClInclude Include="src\Player\player.h" />
+    <ClInclude Include="src\Vehicle\SlotManager.h" />
+    <ClInclude Include="src\Vehicle\VehicleData.h" />
+    <ClInclude Include="src\Native\Settings.h" />
+    <ClInclude Include="src\Native\Native_List.h" />
+    <ClInclude Include="src\Native\Vehicle.h" />
+  </ItemGroup>
+</Project>

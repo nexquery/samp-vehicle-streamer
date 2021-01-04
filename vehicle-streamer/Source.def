@@ -1,0 +1,10 @@
+LIBRARY "vehicle-streamer"
+EXPORTS
+	Supports
+	Load
+	Unload
+	AmxLoad
+	AmxUnload
+	OnPlayerConnect
+	OnPlayerDisconnect
+	ProcessTick
