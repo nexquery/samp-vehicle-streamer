@@ -25,6 +25,10 @@ cell AMX_NATIVE_CALL Native::vStreamer_SetTickRate(AMX* amx, cell* params)
 {
 	CHECK_PARAMS(1);
 	int rate = static_cast<int>(params[1]);
+	if (rate < 1)
+	{
+		rate = 1;
+	}
 	vTick_Rate = rate;
 	return 1;
 }
