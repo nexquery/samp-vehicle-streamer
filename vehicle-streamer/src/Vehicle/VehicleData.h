@@ -24,11 +24,23 @@ struct vdata
 {
 	int real_id;
 
+	bool lock_mode;
+
 	int modelid;
 	float x;
 	float y;
 	float z;
+
+	// Create x,y,z
+	float cx;
+	float cy;
+	float cz;
+
 	float rotation;
+
+	// create r
+	float cr;
+
 	int color1;
 	int color2;
 	int respawn;
