@@ -20,6 +20,7 @@
 #include "Player/player.h"
 #include "Vehicle/VehicleData.h"
 #include "Vehicle/Sync.h"
+#include "Vehicle/SlotManager.h"
 
 extern void* pAMXFunctions;
 
@@ -30,6 +31,16 @@ PLUGIN_EXPORT unsigned int PLUGIN_CALL Supports()
 
 PLUGIN_EXPORT bool PLUGIN_CALL Load(void** ppData)
 {
+	// Clear vehicle data
+	VehicleData::vList.clear();
+
+	// Clear players
+	Player::pList.clear();
+
+	// Reset Slot Manager
+	SlotManager::Reset();
+
+
 	pAMXFunctions = ppData[PLUGIN_DATA_AMX_EXPORTS];
 	bool load = sampgdk::Load(ppData);
 	sampgdk::logprintf("");
@@ -50,8 +61,14 @@ PLUGIN_EXPORT bool PLUGIN_CALL Load(void** ppData)
 
 PLUGIN_EXPORT void PLUGIN_CALL Unload()
 {
-	// Clear Vehicle Data
+	// Clear vehicle data
 	VehicleData::vList.clear();
+
+	// Clear players
+	Player::pList.clear();
+
+	// Reset Slot Manager
+	SlotManager::Reset();
 
 	sampgdk::logprintf("");
 	sampgdk::logprintf(" ===============================");
@@ -129,6 +146,14 @@ PLUGIN_EXPORT int PLUGIN_CALL AmxLoad(AMX* amx)
 
 PLUGIN_EXPORT int PLUGIN_CALL AmxUnload(AMX* amx)
 {
+	// Clear vehicle data
+	VehicleData::vList.clear();
+
+	// Clear players
+	Player::pList.clear();
+
+	// Reset Slot Manager
+	SlotManager::Reset();
 	return AMX_ERR_NONE;
 }
 

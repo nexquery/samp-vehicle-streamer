@@ -24,6 +24,7 @@ class SlotManager
 	public:
 		static size_t Free_ID();
 		static void   Remove_ID(size_t id);
+		static void   Reset();
 
 	private:
 		static size_t ID;

@@ -38,3 +38,9 @@ void SlotManager::Remove_ID(size_t id)
 {
 	Slot.push(id);
 }
+
+void SlotManager::Reset()
+{
+	ID = 1;
+	Slot = std::priority_queue<size_t, std::vector<size_t>, std::greater<size_t>>();
+}
