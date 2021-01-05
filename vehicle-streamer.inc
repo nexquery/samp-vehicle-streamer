@@ -24,7 +24,7 @@
 
 // Araçlar hangi mesafede oluşturulacak?
 #if !defined STREAMER_VEHICLE_DISTANCE
-	#define STREAMER_VEHICLE_DISTANCE 150.0
+	#define STREAMER_VEHICLE_DISTANCE 200.0
 #endif
 
 /*
@@ -34,10 +34,10 @@
 */
 
 // Araçların hangi zaman aralığında kontrol edildiğinin süresini verir
-native vStreamer_GetTickRate();
+native Vehicle_GetTickRate();
 
 // Araçları hangi zaman aralığında güncelleyini ayarlar (ms cinsinden)
-native vStreamer_SetTickRate(rate);
+native Vehicle_SetTickRate(rate);
 
 /*
  ***************************
@@ -173,3 +173,45 @@ native PlayerSpectateDynamicVehicle(playerid, vehicleid, mode = SPECTATE_MODE_NO
 
 // Bir aracın ID değeri geçerli olup olmadığını kontrol eder.
 native IsValidDynamicVehicle(vehicleid);
+
+/*
+ ***************************
+        Geri Aramalar
+ ***************************
+*/
+
+// Bir araca binileceğinde çağrılır.
+forward OnPlayerEnterDynamicVehicle(playerid, vehicleid, ispassenger);
+
+// Bir araçtan inileceği zaman çağrılır.
+forward OnPlayerExitDynamicVehicle(playerid, vehicleid);
+
+// Araç konumu senkronize edildiğinde çağrılır
+forward OnUnoccupiedDynVehicleUpdate(vehicleid, playerid, passenger_seat, Float: new_x, Float: new_y, Float: new_z, Float: vel_x, Float: vel_y, Float: vel_z);
+
+// Bir araç hasar değişikliğine uğradığında çağrılırç
+forward OnDynVehicleDamageStatusUpdate(vehicleid, playerid);
+
+// Bir araç patladığında çağrılır
+forward OnDynamicVehicleDeath(vehicleid, killerid);
+
+// Bir araç modifiye edildiğinde çağrılır.
+forward OnDynamicVehicleMod(playerid, vehicleid, componentid);
+
+// Bir aracın paintjobu değiştiğinde çağrılır.
+forward OnDynamicVehiclePaintjob(playerid, vehicleid, paintjobid);
+
+// Bir aracın rengi değiştiğinde çağrılır.
+forward OnDynamicVehicleRespray(playerid, vehicleid, color1, color2);
+
+// Bir aracın siren değeri değiştiğinde çağrılır.
+forward OnDynVehicleSirenStateChange(playerid, vehicleid, newstate);
+
+// Bir araç spawn edildiğinde çağrılır.
+forward OnDynamicVehicleSpawn(vehicleid);
+
+// Bir araç akışa alındığında çağrılır.
+forward OnDynamicVehicleStreamIn(vehicleid, forplayerid);
+
+// Bir araç akış alanından çıktığında çağrılır.
+forward OnDynamicVehicleStreamOut(vehicleid, forplayerid);
