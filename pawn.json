@@ -1,0 +1,15 @@
+{
+	"user": "BenBurak",
+	"repo": "samp-vehicle-streamer",
+	"entry": "vehicle-streamer.inc",
+	"output": "vehicle-streamer.inc",
+	"dependencies": [
+		"lilAmper/samp-vehicle-streamer"
+	],
+	"runtime": {
+		"version": "0.3.7",
+		"mode": "server",
+		"rcon_password": "password",
+		"port": 7777
+	}
+}
