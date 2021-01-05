@@ -1,4 +1,6 @@
-[![GitHub Release](https://img.shields.io/github/release/BenBurak/samp-vehicle-streamer.svg)](https://github.com/BenBurak/samp-vehicle-streamer/releases/latest) [![Download](https://img.shields.io/github/downloads/BenBurak/samp-vehicle-streamer/total?color=blue)](https://github.com/BenBurak/samp-vehicle-streamer/releases/latest) [![License](https://img.shields.io/github/license/BenBurak/samp-vehicle-streamer?color=blue)](https://github.com/BenBurak/samp-vehicle-streamer) [![sampctl](https://img.shields.io/badge/sampctl-samp--vehicle--streamer-2f2f2f.svg?style=for-the-badge)](https://github.com/BenBurak/samp-vehicle-streamer)
+[![sampctl](https://img.shields.io/badge/sampctl-samp--vehicle--streamer-2f2f2f.svg?style=for-the-badge)](https://github.com/BenBurak/samp-vehicle-streamer)
+
+[![GitHub Release](https://img.shields.io/github/release/BenBurak/samp-vehicle-streamer.svg)](https://github.com/BenBurak/samp-vehicle-streamer/releases/latest) [![Download](https://img.shields.io/github/downloads/BenBurak/samp-vehicle-streamer/total?color=blue)](https://github.com/BenBurak/samp-vehicle-streamer/releases/latest) [![License](https://img.shields.io/github/license/BenBurak/samp-vehicle-streamer?color=blue)](https://github.com/BenBurak/samp-vehicle-streamer)
 
 # SA-MP Vehicle Streamer Plugin
 This plugin was created for SA-MP (San Andreas Multiplayer). The purpose of the plugin is to exceed vehicle limits. Since it is coded in C++, pawn payloads are avoided. This plugin is currently under construction.
