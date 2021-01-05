@@ -102,7 +102,7 @@ native SetDynamicVehicleInterior(vehicleid, interiorid);
 // Bir aracın interior değerini çeker.
 native GetDynamicVehicleInterior(vehicleid);
 
-// Araca modifiye parçarsı ekler.
+// Araca modifiye parçası ekler.
 native AddDynamicVehicleComponent(vehicleid, componentid);
 
 // Bir aracın modifiye parçasını kaldırır.
