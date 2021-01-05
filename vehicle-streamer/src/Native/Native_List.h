@@ -32,8 +32,8 @@
 namespace Native
 {
 	// Settings
-	DEFINE_AMX_NATIVE(vStreamer_GetTickRate);
-	DEFINE_AMX_NATIVE(vStreamer_SetTickRate);
+	DEFINE_AMX_NATIVE(Vehicle_GetTickRate);
+	DEFINE_AMX_NATIVE(Vehicle_SetTickRate);
 
 	// Vehicle
 	DEFINE_AMX_NATIVE(CreateDynamicVehicle);

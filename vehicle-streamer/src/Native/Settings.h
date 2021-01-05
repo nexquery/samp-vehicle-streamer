@@ -18,5 +18,5 @@
 
 #include "Native_List.h"
 
-static int vTick_Rate = 50;
+static int vTick_Rate = 30;
 static int vLastTick_Rate = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now().time_since_epoch()).count();

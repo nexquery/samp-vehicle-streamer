@@ -16,12 +16,12 @@
 
 #include "Settings.h"
 
-cell AMX_NATIVE_CALL Native::vStreamer_GetTickRate(AMX* amx, cell* params)
+cell AMX_NATIVE_CALL Native::Vehicle_GetTickRate(AMX* amx, cell* params)
 {
 	return static_cast<cell>(vTick_Rate);
 }
 
-cell AMX_NATIVE_CALL Native::vStreamer_SetTickRate(AMX* amx, cell* params)
+cell AMX_NATIVE_CALL Native::Vehicle_SetTickRate(AMX* amx, cell* params)
 {
 	CHECK_PARAMS(1);
 	int rate = static_cast<int>(params[1]);

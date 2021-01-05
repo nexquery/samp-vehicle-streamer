@@ -16,12 +16,15 @@
 
 #pragma once
 
+#include <set>
 #include <vector>
 #include <chrono>
 #include <queue>
 #include <string>
 #include <memory>
 #include <functional>
+#include <cstdio>
+#include <stdio.h>
 #include <unordered_map>
 
 #include "sampgdk.h"
