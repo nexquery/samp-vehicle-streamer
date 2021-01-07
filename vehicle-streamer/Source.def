@@ -7,4 +7,16 @@ EXPORTS
 	AmxUnload
 	OnPlayerConnect
 	OnPlayerDisconnect
+	OnPlayerEnterVehicle
+	OnPlayerExitVehicle
+	OnUnoccupiedVehicleUpdate
+	OnVehicleDamageStatusUpdate
+	OnVehicleDeath
+	OnVehicleMod
+	OnVehiclePaintjob
+	OnVehicleRespray
+	OnVehicleSirenStateChange
+	OnVehicleSpawn
+	OnVehicleStreamIn
+	OnVehicleStreamOut
 	ProcessTick
